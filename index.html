@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contentize.js Documentation</title>
+
+
+
+<style>
+
+* {background: white; font-family: courier; color: black; font-size: 35px; width: 80%; padding-left: 50px}
+.code-block, code {background: black; color:white}
+
+</style>    
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Contentize.js Documentation</a>
+</nav>
+
+<div>
+    <h1 style="font-size: 3rem;">Contentize.js</h1>
+    <p >A lightweight JavaScript library for injecting dynamic content from a text file into HTML elements with ease.</p>
+
+    <h2>Introduction</h2>
+    <p><strong>Contentize.js</strong> is a JavaScript micro-library designed to let you dynamically replace placeholders in HTML with content defined in a separate text file or within an embedded 'pre' tag in the HTML. Perfect for small projects, prototyping, or creating simple content-driven pages without needing a full backend.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Easy-to-use placeholder syntax for content injection</li>
+        <li>Option to load content from a local file or inline within the HTML</li>
+        <li>No dependencies required, just plain JavaScript</li>
+        <li>Fast setup with minimal code</li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>The setup for Contentize.js is straightforward. Here’s how to use it:</p>
+
+    <h3>1. Create a Content File</h3>
+    <p>Define your content in a text file (e.g., <code>copy.txt</code>) with each placeholder prefixed by <code>@</code>, followed by the actual content. Here’s an example:</p>
+    <div class="code-block">
+        <code>
+@headline<br>
+The Big Launch<br><br>
+@lead<br>
+Welcome to the exciting new way to add content!<br><br>
+@punchline<br>
+All the benefits, none of the hassle!<br>
+        </code>
+    </div>
+
+    <h3>2. HTML Structure with Placeholders</h3>
+    <p>In your HTML file, use placeholders (e.g., <code>@headline</code>) in your markup. Here’s a sample:</p>
+    <div class="code-block">
+        <code>
+&lt;h1&gt;@headline&lt;/h1&gt;<br>
+&lt;p&gt;@lead&lt;/p&gt;<br>
+&lt;h2&gt;@punchline&lt;/h2&gt;
+        </code>
+    </div>
+
+    <h3>3. Add Contentize.js</h3>
+    <p>Include the Contentize.js script in your HTML and set the <code>data-content</code> attribute to your text file. Example:</p>
+    <div class="code-block">
+        <code>
+&lt;script src="contentize.js" data-content="copy.txt"&gt;&lt;/script&gt;
+        </code>
+    </div>
+
+    <h3>4. Using Inline Content</h3>
+    <p>If you prefer to include the content within the HTML file, use a hidden <code>&lt;pre&gt;</code> tag with an ID:</p>
+    <div class="code-block">
+        <code>
+&lt;pre id="content-data"&gt;<br>
+@headline<br>
+The Big Launch<br><br>
+@lead<br>
+Welcome to the exciting new way to add content!<br><br>
+@punchline<br>
+All the benefits, none of the hassle!<br>
+&lt;/pre&gt;
+        </code>
+    </div>
+
+    <h2>Advantages</h2>
+    <ul>
+        <li>Simple to set up and lightweight for small projects.</li>
+        <li>No back-end dependency, making it great for static sites.</li>
+        <li>Improves content management by keeping the structure and content separate.</li>
+        <li>Perfect for quick prototyping or adding dynamic content to static HTML pages.</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>For a live demo, please visit: <a href="Demo.html" class="demo-link">Demo.html</a></p>
+</div>
+
+
+
+</body>
+</html>

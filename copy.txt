@@ -1,0 +1,8 @@
+@headline
+The big work
+
+@lead
+Welcome to the big thing, this is amazing
+
+@punchline
+Maximum advantage
